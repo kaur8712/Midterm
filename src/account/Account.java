@@ -18,6 +18,7 @@ public class Account {
  
      /**constructor that takes the initial balance
       * @param initialBalance 
+     * @param givenUser 
       */
         public Account(double initialBalance,String givenUser)
         {
@@ -25,16 +26,26 @@ public class Account {
             user=givenUser;
             //To create an account the initial balance must be greater than 50.       
         }
-
+        public double getBalance(double balance)
+        {
+        return balance*0.3;
+        }
+        public double setBalance(double balance)
+        {
+        this.balance = balance ;
+            return balance;
+        }
      /**The method for depositing amount and 
-      * updating balance*/
+      * updating balance
+     * @param amount*/
         public void credit(double amount)
         {
             balance=balance+amount;
         }
 
      /**The method for debit(withdrawing amount) and 
-      * updating balance */
+      * updating balance
+     * @param amount */
         public void debit(double amount)
         {
             balance=balance-amount;
